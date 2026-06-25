@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkyMood </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Nunito:wght@700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+  <div class="bg-photo" id="bgPhoto"></div>
+  <div class="bg-overlay" id="bgOverlay"></div>
+
+
+  <div class="app">
+
+    
+    <section class="home-hero" id="homeHero">
+      <div class="home-hero-header">
+        <div class="theme-toggle" id="themeToggleHome">
+          <button class="toggle-btn active" id="btnLightHome" aria-label="Light mode">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+          </button>
+          <button class="toggle-btn" id="btnDarkHome" aria-label="Dark mode">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+  
+      <div class="hero-center">
+        <div class="hero-cloud-icon">
+          <svg width="52" height="40" viewBox="0 0 28 22" fill="none">
+            <path d="M22 18H6C3.24 18 1 15.76 1 13C1 10.45 2.94 8.35 5.43 8.05C5.15 7.43 5 6.73 5 6C5 3.24 7.24 1 10 1C11.75 1 13.3 1.88 14.24 3.21C14.79 3.07 15.38 3 16 3C19.31 3 22 5.69 22 9C22 9.34 21.97 9.67 21.91 10H22C24.21 10 26 11.79 26 14C26 16.21 24.21 18 22 18Z" fill="currentColor"/>
+          </svg>
+        </div>
+        <h1 class="hero-title">SkyMood</h1>
+        <p class="hero-tagline">FEEL THE WEATHER</p>
+      </div>
+
+     
+      <div class="hero-search-wrap">
+        <div class="search-box">
+          <span class="search-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+          </span>
+          <input type="text" id="cityInputHome" placeholder="Search a city..." autocomplete="off" spellcheck="false" />
+          <button id="searchBtnHome" class="go-btn">
+            <span class="btn-text">Go</span>
+            <span class="btn-spinner" hidden>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <path d="M12 2a10 10 0 1 0 10 10"/>
+              </svg>
+            </span>
+          </button>
+        </div>
+        <div class="error-banner" id="errorBannerHome" hidden>
+          <span>⚠</span>
+          <span id="errorTextHome">City not found. Try another name.</span>
+        </div>
+      </div>
+
+     
+      <div class="feature-grid feature-grid--2">
+        <div class="feature-card">
+          <div class="feature-icon" style="color:#a78bfa">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Real-time Weather</h3>
+          <p class="feature-desc">Up-to-date conditions in any city.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="color:#60a5fa">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Explore Anywhere</h3>
+          <p class="feature-desc">Discover the mood of any place in the world.</p>
+        </div>
+      </div>
+    </section>
+
+  
+    <div class="results-shell" id="resultsShell" hidden>
+
+    
+      <header class="header">
+        <div class="logo">
+          <span class="logo-cloud">
+            <svg width="22" height="17" viewBox="0 0 28 22" fill="none">
+              <path d="M22 18H6C3.24 18 1 15.76 1 13C1 10.45 2.94 8.35 5.43 8.05C5.15 7.43 5 6.73 5 6C5 3.24 7.24 1 10 1C11.75 1 13.3 1.88 14.24 3.21C14.79 3.07 15.38 3 16 3C19.31 3 22 5.69 22 9C22 9.34 21.97 9.67 21.91 10H22C24.21 10 26 11.79 26 14C26 16.21 24.21 18 22 18Z" fill="currentColor"/>
+            </svg>
+          </span>
+          <span class="logo-text">SkyMood</span>
+        </div>
+        <section class="search-section">
+          <div class="search-box search-box--compact">
+            <span class="search-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+            </span>
+            <input type="text" id="cityInput" placeholder="Search a city..." autocomplete="off" spellcheck="false" />
+            <button id="searchBtn" class="go-btn go-btn--sm">
+              <span class="btn-text">Go</span>
+              <span class="btn-spinner" hidden>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                  <path d="M12 2a10 10 0 1 0 10 10"/>
+                </svg>
+              </span>
+            </button>
+          </div>
+        </section>
+        <div class="theme-toggle" id="themeToggle">
+          <button class="toggle-btn active" id="btnLight" aria-label="Light mode">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+          </button>
+          <button class="toggle-btn" id="btnDark" aria-label="Dark mode">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+
+      <div class="error-banner" id="errorBanner" hidden>
+        <span>⚠</span>
+        <span id="errorText">City not found. Try another name.</span>
+      </div>
+
+  
+      <section class="result-section" id="weatherCard">
+
+       
+        <div class="result-hero">
+          <div class="result-city">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="opacity:.7">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span id="cityName">—</span>
+          </div>
+          <div class="result-main">
+            <div class="result-icon" id="weatherIcon">⛅</div>
+            <div class="result-temps">
+              <div class="result-temp"><span id="tempValue">--</span>°C</div>
+              <div class="result-desc" id="weatherDesc">—</div>
+              <div class="result-meta" id="resultMeta">—</div>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-head"><span class="stat-ico">🌡️</span><span class="stat-label">Temperature</span></div>
+            <div class="stat-big" id="statTemp">--°C</div>
+            <div class="stat-mood" id="statTempMood">—</div>
+            <div class="stat-note" id="statTempNote">—</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-head"><span class="stat-ico">💧</span><span class="stat-label">Humidity</span></div>
+            <div class="stat-big" id="statHumidity">--%</div>
+            <div class="stat-mood" id="statHumidityMood">—</div>
+            <div class="stat-note" id="statHumidityNote">—</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-head"><span class="stat-ico">💨</span><span class="stat-label">Wind</span></div>
+            <div class="stat-big" id="statWind">-- km/h</div>
+            <div class="stat-mood" id="statWindMood">—</div>
+            <div class="stat-note" id="statWindNote">—</div>
+          </div>
+        </div>
+
+    
+        <div class="mood-banner">
+          <span class="mood-banner-icon" id="moodBannerIcon">🌤️</span>
+          <div>
+            <div class="mood-banner-title" id="moodBannerTitle">—</div>
+            <div class="mood-banner-sub" id="moodBannerSub">—</div>
+          </div>
+        </div>
+
+      </section>
+
+      <footer class="footer">
+        <p>Built with ♥ · Powered by <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> &amp; <a href="https://nominatim.openstreetmap.org/" target="_blank" rel="noopener">OpenStreetMap</a></p>
+      </footer>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
