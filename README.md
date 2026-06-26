@@ -10,7 +10,6 @@ A weather web application built with HTML, CSS, and JavaScript that displays rea
 - Dynamic themes based on weather conditions.
 - Contextual mood messages.
 - Responsive design for mobile and desktop.
-- Accessibility support, including reduced motion.
 
 ---
 
