@@ -22,15 +22,4 @@ A weather web application built with HTML, CSS, and JavaScript that displays rea
 - JavaScript (ES6+)
 - OpenWeatherMap API
 
----
-
-## Preview
-
-![alt text](image.png)
-![alt text](image-1.png)
----
-
-## License
-
-MIT License.
 
