@@ -9,7 +9,6 @@ A weather web application built with HTML, CSS, and JavaScript that displays rea
 - Real-time weather search by city.
 - Dynamic themes based on weather conditions.
 - Contextual mood messages.
-- Rain, snow, and night sky animations.
 - Responsive design for mobile and desktop.
 - Accessibility support, including reduced motion.
 
